@@ -1,0 +1,31 @@
+.about-us {
+    width: 100vw;
+    background: linear-gradient(
+        to bottom,
+        var(--color-primary),
+        var(--color-white)
+    );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5rem 5rem 0;
+    margin-bottom: 16rem;
+
+    &__image {
+        width: 60%;
+        transform: translateY(7rem);
+    }
+
+    &__content {
+        padding: 0 5rem;
+    }
+
+    &__heading {
+        font-size: var(--font-size-large);
+        font-family: var(--font-family-secondary);
+        margin-bottom: 3rem;
+    }
+
+    // &__text {
+    // }
+}

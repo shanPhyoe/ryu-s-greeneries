@@ -1,0 +1,26 @@
+.sign-in-sign-up {
+    margin-bottom: 7rem;
+    width: 200vw;
+    height: 80rem;
+    display: flex;
+    align-items: flex-start;
+    transform: translate(-100vw, 7rem);
+    position: relative;
+    transition: transform 1.5s cubic-bezier(0.18, 1.08, 0.18, 1.08);
+
+    &::before {
+        z-index: -10;
+        content: '';
+        position: absolute;
+        transform: translateX(-50%);
+        left: 50%;
+        width: 100vw;
+        height: 75rem;
+        background: url('../../assets/img/sign-in-background.jpg');
+        box-shadow: inset 0 0 8px 8px var(--color-primary);
+    }
+}
+
+.sign-in {
+    transform: translate(0, 7rem);
+}

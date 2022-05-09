@@ -1,0 +1,30 @@
+.section-believe {
+    position: relative;
+    margin-bottom: 16rem;
+    padding: 0 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__content {
+        width: 60rem;
+        padding: 5rem;
+        background: linear-gradient(var(--color-white), var(--color-tertiary));
+        position: absolute;
+        transform: translateX(-40%);
+    }
+
+    &__heading {
+        font-size: var(--font-size-large);
+        font-family: var(--font-family-secondary);
+        margin-bottom: 3rem;
+    }
+
+    // &__text {
+    // }
+
+    &__image {
+        width: 60%;
+        margin-left: auto;
+    }
+}

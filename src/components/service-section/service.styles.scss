@@ -1,0 +1,16 @@
+.services {
+    margin-bottom: 12rem;
+
+    &__heading {
+        text-align: center;
+        font-family: var(--font-family-secondary);
+        font-size: var(--font-size-large);
+        margin-bottom: 6rem;
+    }
+
+    &__services {
+        display: flex;
+        gap: 4rem;
+        justify-content: center;
+    }
+}

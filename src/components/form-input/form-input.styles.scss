@@ -1,0 +1,50 @@
+.form-input__group {
+    margin-bottom: 3rem !important;
+    position: relative;
+}
+
+.form-input__label {
+    font-size: var(--font-size-tiny);
+    position: absolute;
+    top: 1.3rem;
+    left: 2rem;
+    transition: all 0.4s;
+    pointer-events: none;
+}
+
+.form-input__input {
+    border: 1px solid #c4c4c4;
+    background-color: rgba(#c4c4c4, 0.5);
+    height: 4.5rem;
+    width: 100%;
+    padding: 1.5rem 2rem;
+    font-size: var(--font-size-default);
+    font-family: inherit;
+
+    &:focus {
+        outline: none;
+        border: 3px solid var(--color-white);
+    }
+}
+
+.form-input__input:focus + .form-input__label {
+    top: -2rem;
+    left: 0;
+    color: var(--color-secondary);
+    font-size: var(--font-size-default);
+}
+
+input[type='password'] {
+    letter-spacing: 0.5em;
+}
+
+.active .form-input__label {
+    color: var(--color-secondary);
+    font-size: var(--font-size-default);
+    top: -2rem;
+    left: 0;
+}
+
+.active .form-input__input {
+    border: 1px solid var(--color-secondary);
+}

@@ -1,0 +1,11 @@
+.sign-in {
+    width: 100vw;
+    position: relative;
+
+    & .form-container {
+        position: absolute;
+        transform: translateX(-50%);
+        top: 3rem;
+        left: 50%;
+    }
+}
