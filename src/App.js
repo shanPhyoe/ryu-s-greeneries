@@ -28,16 +28,15 @@ class App extends React.Component {
             <div className="App">
                 <NavBar />
                 <Routes>
-                    <Route exact path="/" element={<HomePage />} />
-                    <Route exact path="/about" element={<AboutPage />} />
-                    <Route path="/shop" element={<ShopPage />} />
-                    <Route exact path="/search" element={<SearchPage />} />
+                    <Route path="/*" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/shop/*" element={<ShopPage />} />
+                    <Route path="/search" element={<SearchPage />} />
                     <Route
-                        exact
                         path="/join"
                         element={
                             currentUser ? (
-                                <Navigate to="/" replace />
+                                <Navigate replace to="/" />
                             ) : (
                                 <SignInSignUp />
                             )

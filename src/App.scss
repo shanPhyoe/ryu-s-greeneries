@@ -45,3 +45,8 @@ a {
         text-decoration: none;
     }
 }
+
+::selection {
+    color: var(--color-white);
+    background: var(--color-secondary);
+}

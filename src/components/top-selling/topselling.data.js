@@ -2,7 +2,7 @@ const topSellingData = [
     {
         id: 1,
         name: "Burro's Tail",
-        price: 89.99,
+        price: 49.99,
         imageUrl: 'https://i.ibb.co/z7Bk34b/Burro-s-Tail.jpg',
     },
     {
@@ -14,13 +14,13 @@ const topSellingData = [
     {
         id: 3,
         name: 'African Violet',
-        price: 18.99,
+        price: 19.99,
         imageUrl: 'https://i.ibb.co/QfK6dG1/African-Violet.jpg',
     },
     {
         id: 4,
         name: 'Asparagus Fern',
-        price: 39.99,
+        price: 24.99,
         imageUrl: 'https://i.ibb.co/87Xh34G/Asparagus-Fern.jpg',
     },
 ];

@@ -1,0 +1,16 @@
+.shop-page {
+    padding-top: 10rem;
+    margin: 0 auto;
+
+    &__heading {
+        width: 40rem;
+        margin: 0 auto 3rem;
+        text-align: center;
+
+        &--text {
+            color: var(--color-secondary);
+            font-family: var(--font-family-secondary);
+            font-size: var(--font-size-large);
+        }
+    }
+}

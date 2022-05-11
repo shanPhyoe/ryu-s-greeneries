@@ -1,0 +1,23 @@
+.types-overview {
+    &__heading {
+        text-align: center;
+        font-family: var(--font-family-secondary);
+        font-size: var(--font-size-large);
+        margin-bottom: 3rem;
+    }
+
+    &__container {
+        max-width: 140rem;
+        margin: 3rem auto;
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        flex-wrap: wrap;
+    }
+
+    & a {
+        width: fit-content;
+        display: block;
+        margin: 6rem auto 0;
+    }
+}

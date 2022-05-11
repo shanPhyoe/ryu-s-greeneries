@@ -2,6 +2,8 @@ import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
 import 'firebase/compat/firestore';
 
+// import shopData from '../redux/shop/shop.data';
+
 const firebaseConfig = {
     apiKey: 'AIzaSyBFKufrt9grjfdhG-UMzvss175ibpLphJs',
     authDomain: 'ryus-greeneries.firebaseapp.com',
@@ -14,7 +16,7 @@ const firebaseConfig = {
 // init firebase app
 firebase.initializeApp(firebaseConfig);
 
-// this function checks if the userDocs already exists in firestore users collection, return if exists and creates one if does not exists
+// this function checks if the userDocs already exists in firestore users collection, return userRef if exists and creates one if does not exists
 export const createUserDocument = async (userProfile, otherData) => {
     if (!userProfile) return;
 
@@ -48,6 +50,36 @@ export function getCurrentUser() {
         }, rej);
     });
 }
+
+// adding items to firestore (DEVELOPMENT FUNCTION)
+export const addCollectionAndDoc = async (collectionName, datasToAdd) => {
+    const collectionRef = firestore.collection(collectionName);
+
+    // the batch is created in case connection problems occur while pushing each data to firestore, the batch will push all datas at once or no data at all
+    const batch = firestore.batch();
+
+    // collecting each data into batch
+    datasToAdd.forEach(data => {
+        const newDocRef = collectionRef.doc();
+
+        batch.set(newDocRef, data);
+    });
+
+    // pushing the whole batch into firestore
+    return await batch.commit();
+};
+// addCollectionAndDoc('plants', shopData);
+
+// data normalization for firestore's returned data to reduce data redundancy
+export const snapshotToMap = snapShot => {
+    const snapShotDocsData = snapShot.docs.map(doc => doc.data());
+
+    return snapShotDocsData.reduce((accumulator, plant) => {
+        accumulator[plant.routeName] = plant;
+        // console.log(accumulator);
+        return accumulator;
+    }, {});
+};
 
 export const auth = firebase.auth();
 export const firestore = firebase.firestore();

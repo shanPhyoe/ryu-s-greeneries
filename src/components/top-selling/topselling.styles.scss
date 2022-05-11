@@ -1,25 +1,3 @@
 .topselling {
     margin: 12rem 0;
-
-    &__title {
-        text-align: center;
-        font-family: var(--font-family-secondary);
-        font-size: var(--font-size-large);
-        margin-bottom: 6rem;
-    }
-
-    &__panel {
-        max-width: 140rem;
-        margin: 0 auto;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 4rem;
-    }
-
-    & a {
-        width: fit-content;
-        display: block;
-        margin: 6rem auto 0;
-    }
 }
