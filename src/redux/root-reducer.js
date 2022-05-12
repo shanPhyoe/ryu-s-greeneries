@@ -9,7 +9,7 @@ import signInSignUpReducer from './sign-in-sign-up/sign-in-sign-up.reducer';
 const persistConfig = {
     key: 'root',
     storage,
-    whitelist: ['user', 'shop'],
+    whitelist: ['user'],
 };
 
 const rootReducer = combineReducers({

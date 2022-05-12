@@ -60,9 +60,9 @@
     }
 
     &__detail {
-        width: 100%;
         padding: 2rem 0;
         text-align: center;
+        color: var(--color-black);
         background: linear-gradient(
             to right,
             var(--color-primary),
@@ -77,5 +77,10 @@
 
     &__price {
         font-size: var(--font-size-default);
+    }
+
+    &__link {
+        margin: 0 !important;
+        width: 100% !important;
     }
 }

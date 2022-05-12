@@ -4,7 +4,7 @@ import { createStructuredSelector } from 'reselect';
 
 import TypesOverview from '../types-overview/types-overview.component';
 
-import { selectPlantsForOverview } from '../../redux/shop/shop.selector';
+import { selectAllPlantsGroups } from '../../redux/shop/shop.selector';
 
 import './categories-overview.styles.scss';
 
@@ -16,7 +16,7 @@ const CategoriesOverview = ({ plantsGroups }) => {
                     <TypesOverview
                         key={group.id}
                         title={group.category}
-                        items={group.items}
+                        items={group.items.filter((_, index) => index < 4)}
                         buttonName="See More"
                         buttonLink={`${group.routeName}`}
                     />
@@ -27,7 +27,7 @@ const CategoriesOverview = ({ plantsGroups }) => {
 };
 
 const mapStateToProps = createStructuredSelector({
-    plantsGroups: selectPlantsForOverview,
+    plantsGroups: selectAllPlantsGroups,
 });
 
 export default connect(mapStateToProps)(CategoriesOverview);

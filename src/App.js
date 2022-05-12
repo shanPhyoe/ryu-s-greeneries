@@ -28,7 +28,7 @@ class App extends React.Component {
             <div className="App">
                 <NavBar />
                 <Routes>
-                    <Route path="/*" element={<HomePage />} />
+                    <Route path="/" element={<HomePage />} />
                     <Route path="/about" element={<AboutPage />} />
                     <Route path="/shop/*" element={<ShopPage />} />
                     <Route path="/search" element={<SearchPage />} />

@@ -11,11 +11,9 @@ const TypesOverview = ({ title, items, buttonName, buttonLink }) => {
         <div className="types-overview">
             <h2 className="types-overview__heading">{title}</h2>
             <div className="types-overview__container">
-                {items
-                    .filter((_, index) => index <= 3)
-                    .map(item => {
-                        return <Item key={item.id} item={item} />;
-                    })}
+                {items.map(item => {
+                    return <Item key={item.id} item={item} />;
+                })}
             </div>
             <Link to={`${buttonLink}`}>
                 <CustomButton>{buttonName}</CustomButton>
