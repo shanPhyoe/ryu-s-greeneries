@@ -6,7 +6,7 @@ import { fetchPlantsInit } from '../../redux/shop/shop.action';
 import { selectFetchingStatus } from '../../redux/shop/shop.selector';
 
 import CategoriesOverview from '../../components/categories-overview/categories-overview.component';
-import PlantsCollectionPage from '../plants-collection-page/plants-collection-page.component';
+import PlantsCategoryPage from '../plants-category-page/plants-category-page.component';
 
 import './shoppage.styles.scss';
 import { createStructuredSelector } from 'reselect';
@@ -28,7 +28,7 @@ const ShopPage = ({ fetchPlantsInit, isFetchingDone }) => {
                 <Route path="" element={<CategoriesOverview />} />
                 <Route
                     path=":plantsCategoryUrl/*"
-                    element={<PlantsCollectionPage />}
+                    element={<PlantsCategoryPage />}
                 />
             </Routes>
         </div>

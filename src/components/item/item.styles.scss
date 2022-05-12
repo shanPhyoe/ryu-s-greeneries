@@ -66,8 +66,15 @@
         background: linear-gradient(
             to right,
             var(--color-primary),
-            var(--color-tertiary)
+            var(--color-tertiary) 50%,
+            var(--color-primary) 100%
         );
+        background-size: 200%;
+        transition: background 0.4s;
+
+        &:hover {
+            background-position: 100%;
+        }
     }
 
     &__name {

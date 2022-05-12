@@ -12,6 +12,7 @@ import AboutPage from './pages/about/aboutpage.component';
 import ShopPage from './pages/shop/shoppage.component';
 import SearchPage from './pages/search/searchpage.component';
 import SignInSignUp from './pages/signin-&-signup/sign-in-&-sign-up.component';
+import NotFound from './pages/notfound/not-found.component';
 import Footer from './components/footer/footer.component';
 
 import './App.scss';
@@ -42,6 +43,7 @@ class App extends React.Component {
                             )
                         }
                     />
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
                 <Footer />
             </div>

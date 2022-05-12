@@ -5,10 +5,10 @@ import { useSelector } from 'react-redux';
 import { selectCategory } from '../../redux/shop/shop.selector';
 
 import TypesOverview from '../../components/types-overview/types-overview.component';
-import Loading from '../../components/loading/loading.component';
+import NotFound from '../notfound/not-found.component';
 import PlantDetails from '../plant-details/plant-details.component';
 
-import './plants-collection-page.styles.scss';
+import './plants-category-page.styles.scss';
 
 const PlantsCategoryPage = () => {
     const { plantsCategoryUrl } = useParams();
@@ -28,7 +28,7 @@ const PlantsCategoryPage = () => {
                                 buttonLink="/shop"
                             />
                         ) : (
-                            <Loading />
+                            <NotFound />
                         )}
                     </div>
                 }
