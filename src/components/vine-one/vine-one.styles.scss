@@ -1,0 +1,15 @@
+.vine-one__container {
+    height: 15rem;
+    position: relative;
+    overflow: hidden;
+    transform-origin: left center;
+}
+
+.vine-one__icon {
+    position: absolute;
+    width: 40rem;
+    height: 20rem;
+    left: 0;
+    top: -6rem;
+    transform: scaleY(0.6);
+}

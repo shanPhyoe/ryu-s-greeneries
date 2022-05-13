@@ -9,7 +9,7 @@ import './types-overview.styles.scss';
 const TypesOverview = ({ title, items, buttonName, buttonLink }) => {
     return (
         <div className="types-overview">
-            <h2 className="types-overview__heading">{title}</h2>
+            <h3 className="types-overview__heading">{title}</h3>
             <div className="types-overview__container">
                 {items.map(item => {
                     return <Item key={item.id} item={item} />;

@@ -5,6 +5,7 @@ import { Routes, Route } from 'react-router-dom';
 import { fetchPlantsInit } from '../../redux/shop/shop.action';
 import { selectFetchingStatus } from '../../redux/shop/shop.selector';
 
+import VineOne from '../../components/vine-one/vine-one.component';
 import CategoriesOverview from '../../components/categories-overview/categories-overview.component';
 import PlantsCategoryPage from '../plants-category-page/plants-category-page.component';
 
@@ -19,10 +20,10 @@ const ShopPage = ({ fetchPlantsInit, isFetchingDone }) => {
     return (
         <div className="shop-page">
             <div className="shop-page__heading">
-                <h2 className="shop-page__heading--text">
+                <h1 className="shop-page__heading--text">
                     Ryu's Greeneries Shop
-                </h2>
-                {/* To add svg animation later!!! */}
+                </h1>
+                <VineOne />
             </div>
             <Routes>
                 <Route path="" element={<CategoriesOverview />} />

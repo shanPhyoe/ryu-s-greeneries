@@ -16,7 +16,7 @@ const CategoriesOverview = ({ plantsGroups }) => {
                     <TypesOverview
                         key={group.id}
                         title={group.category}
-                        items={group.items.filter((_, index) => index < 4)}
+                        items={group.items.filter((_, index) => index < 3)}
                         buttonName="See More"
                         buttonLink={`${group.routeName}`}
                     />

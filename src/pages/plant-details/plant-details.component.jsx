@@ -1,9 +1,10 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { connect, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
 
-import Image from '../../assets/img/vine.png';
+// import Image from '../../assets/img/vine.png';
 
+import { addItemToCart } from '../../redux/cart/cart.action';
 import { selectPlant } from '../../redux/shop/shop.selector';
 
 import Loading from '../../components/loading/loading.component';
@@ -11,7 +12,7 @@ import CustomButton from '../../components/custom-button/custom-button.component
 
 import './plant-details.styles.scss';
 
-const PlantDetails = () => {
+const PlantDetails = ({ addItem }) => {
     const navigate = useNavigate();
     const { plantId } = useParams();
     const plant = useSelector(selectPlant(plantId));
@@ -49,6 +50,9 @@ const PlantDetails = () => {
                                     />
                                 </div> */}
                                 <p className="details__about">{plant.about}</p>
+                                <CustomButton onClick={() => addItem(plant)}>
+                                    Add to Cart
+                                </CustomButton>
                             </div>
                         </div>
                     </div>
@@ -63,4 +67,8 @@ const PlantDetails = () => {
     );
 };
 
-export default PlantDetails;
+const mapDispatchToProps = dispatch => ({
+    addItem: item => dispatch(addItemToCart(item)),
+});
+
+export default connect(null, mapDispatchToProps)(PlantDetails);

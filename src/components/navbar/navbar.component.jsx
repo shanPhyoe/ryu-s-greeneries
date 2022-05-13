@@ -7,6 +7,9 @@ import { selectCurrentUser } from '../../redux/user/user.selector';
 import { signOutStart } from '../../redux/user/user.action';
 
 import Logo from '../../assets/img/logo.png';
+
+import CartIcon from '../cart-icon/cart-icon.component';
+
 import { ReactComponent as SearchIcon } from '../../assets/icon/search.svg';
 import { ReactComponent as Login } from '../../assets/icon/login.svg';
 import { ReactComponent as Logout } from '../../assets/icon/logout.svg';
@@ -43,7 +46,9 @@ const NavBar = ({ currentUser, signOutStart }) => {
                         </Link>
                     </li>
                 )}
-                <li className="navbar__item">Cart</li>
+                <li className="navbar__item">
+                    <CartIcon />
+                </li>
             </ul>
         </nav>
     );
