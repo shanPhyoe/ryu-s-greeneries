@@ -12,10 +12,12 @@ import AboutPage from './pages/about/aboutpage.component';
 import ShopPage from './pages/shop/shoppage.component';
 import SearchPage from './pages/search/searchpage.component';
 import SignInSignUp from './pages/signin-&-signup/sign-in-&-sign-up.component';
+import CheckOut from './pages/checkout/checkout.component';
 import NotFound from './pages/notfound/not-found.component';
 import Footer from './components/footer/footer.component';
 
 import './App.scss';
+import Loading from './components/loading/loading.component';
 
 class App extends React.Component {
     componentDidMount() {
@@ -43,7 +45,9 @@ class App extends React.Component {
                             )
                         }
                     />
+                    <Route path="/checkout" element={<CheckOut />} />
                     <Route path="*" element={<NotFound />} />
+                    <Route path="/loading" element={<Loading />} />
                 </Routes>
                 <Footer />
             </div>

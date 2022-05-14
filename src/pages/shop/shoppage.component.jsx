@@ -5,7 +5,8 @@ import { Routes, Route } from 'react-router-dom';
 import { fetchPlantsInit } from '../../redux/shop/shop.action';
 import { selectFetchingStatus } from '../../redux/shop/shop.selector';
 
-import VineOne from '../../components/vine-one/vine-one.component';
+import Vine from '../../components/vine-animate/vine-animate.component';
+import { ReactComponent as VineOne } from '../../assets/icon/vine-1.svg';
 import CategoriesOverview from '../../components/categories-overview/categories-overview.component';
 import PlantsCategoryPage from '../plants-category-page/plants-category-page.component';
 
@@ -23,7 +24,7 @@ const ShopPage = ({ fetchPlantsInit, isFetchingDone }) => {
                 <h1 className="shop-page__heading--text">
                     Ryu's Greeneries Shop
                 </h1>
-                <VineOne />
+                <Vine Svg={VineOne} />
             </div>
             <Routes>
                 <Route path="" element={<CategoriesOverview />} />

@@ -6,6 +6,7 @@ const shopData = [
         items: [
             {
                 id: 100,
+                parentRoute: 'air-purifying',
                 name: 'Aloe Vera',
                 price: '24.99',
                 type: 'Air Purifying Houseplant',
@@ -14,6 +15,7 @@ const shopData = [
             },
             {
                 id: 101,
+                parentRoute: 'air-purifying',
                 name: 'Golden Pothos',
                 price: '64.99',
                 type: 'Air Purifying Houseplant',
@@ -22,6 +24,7 @@ const shopData = [
             },
             {
                 id: 102,
+                parentRoute: 'air-purifying',
                 name: 'Philodendron Plant',
                 price: '39.99',
                 type: 'Air Purifying Houseplant',
@@ -30,6 +33,7 @@ const shopData = [
             },
             {
                 id: 103,
+                parentRoute: 'air-purifying',
                 name: 'Snake Plant',
                 price: '49.99',
                 type: 'Air Purifying Houseplant',
@@ -38,6 +42,7 @@ const shopData = [
             },
             {
                 id: 104,
+                parentRoute: 'air-purifying',
                 name: 'Spider Plant',
                 price: '64.99',
                 type: 'Air Purifying Houseplant',
@@ -53,6 +58,7 @@ const shopData = [
         items: [
             {
                 id: 200,
+                parentRoute: 'colorful-foliage',
                 name: 'Calathea',
                 price: '36.99',
                 type: 'Colorful Foliage Houseplant',
@@ -61,6 +67,7 @@ const shopData = [
             },
             {
                 id: 201,
+                parentRoute: 'colorful-foliage',
                 name: 'Coleus',
                 price: '24.99',
                 type: 'Colorful Foliage Houseplant',
@@ -69,6 +76,7 @@ const shopData = [
             },
             {
                 id: 202,
+                parentRoute: 'colorful-foliage',
                 name: 'Nerve Plant',
                 price: '19.99',
                 type: 'Colorful Foliage Houseplant',
@@ -77,6 +85,7 @@ const shopData = [
             },
             {
                 id: 203,
+                parentRoute: 'colorful-foliage',
                 name: 'Persian Shield Plant',
                 price: '16.99',
                 type: 'Colorful Foliage Houseplant',
@@ -85,6 +94,7 @@ const shopData = [
             },
             {
                 id: 204,
+                parentRoute: 'colorful-foliage',
                 name: 'Pink Polka Dot',
                 price: '19.99',
                 type: 'Colorful Foliage Houseplant',
@@ -93,6 +103,7 @@ const shopData = [
             },
             {
                 id: 205,
+                parentRoute: 'colorful-foliage',
                 name: 'Prayer Plant',
                 price: '26.99',
                 type: 'Colorful Foliage Houseplant',
@@ -108,6 +119,7 @@ const shopData = [
         items: [
             {
                 id: 300,
+                parentRoute: 'flowering',
                 name: 'African Violet',
                 price: '19.99',
                 type: 'Flowering Houseplant',
@@ -116,6 +128,7 @@ const shopData = [
             },
             {
                 id: 301,
+                parentRoute: 'flowering',
                 name: 'Amaryllis',
                 price: '28.49',
                 type: 'Flowering Houseplant',
@@ -124,6 +137,7 @@ const shopData = [
             },
             {
                 id: 302,
+                parentRoute: 'flowering',
                 name: 'Angel Wing Begonia',
                 price: '29.99',
                 type: 'Flowering Houseplant',
@@ -132,6 +146,7 @@ const shopData = [
             },
             {
                 id: 303,
+                parentRoute: 'flowering',
                 name: 'Bromeliads',
                 price: '44.99',
                 type: 'Flowering Houseplant',
@@ -140,6 +155,7 @@ const shopData = [
             },
             {
                 id: 304,
+                parentRoute: 'flowering',
                 name: 'Jasmine',
                 price: '18.99',
                 type: 'Flowering Houseplant',
@@ -148,6 +164,7 @@ const shopData = [
             },
             {
                 id: 305,
+                parentRoute: 'flowering',
                 name: 'Orchid',
                 price: '39.99',
                 type: 'Flowering Houseplant',
@@ -156,6 +173,7 @@ const shopData = [
             },
             {
                 id: 306,
+                parentRoute: 'flowering',
                 name: 'Red Kiss Begonia',
                 price: '29.99',
                 type: 'Flowering Houseplant',
@@ -171,6 +189,7 @@ const shopData = [
         items: [
             {
                 id: 400,
+                parentRoute: 'low-light',
                 name: 'Chinese Evergreen',
                 price: '19.59',
                 type: 'Low-light Houseplant',
@@ -179,6 +198,7 @@ const shopData = [
             },
             {
                 id: 401,
+                parentRoute: 'low-light',
                 name: 'Warneckii',
                 price: '24.99',
                 type: 'Low-light Houseplant',
@@ -187,6 +207,7 @@ const shopData = [
             },
             {
                 id: 402,
+                parentRoute: 'low-light',
                 name: 'Peace Lily',
                 price: '24.99',
                 type: 'Low-light Houseplant',
@@ -195,6 +216,7 @@ const shopData = [
             },
             {
                 id: 403,
+                parentRoute: 'low-light',
                 name: 'Peperomia Hope',
                 price: '19.99',
                 type: 'Low-light Houseplant',
@@ -203,6 +225,7 @@ const shopData = [
             },
             {
                 id: 404,
+                parentRoute: 'low-light',
                 name: 'Peperomia Red Edge',
                 price: '49.99',
                 type: 'Low-light Houseplant',
@@ -211,6 +234,7 @@ const shopData = [
             },
             {
                 id: 405,
+                parentRoute: 'low-light',
                 name: 'Rubber Plant',
                 price: '34.99',
                 type: 'Low-light Houseplant',
@@ -226,6 +250,7 @@ const shopData = [
         items: [
             {
                 id: 500,
+                parentRoute: 'small',
                 name: 'Asparagus Fern',
                 price: '24.99',
                 type: 'Small Houseplant',
@@ -234,6 +259,7 @@ const shopData = [
             },
             {
                 id: 501,
+                parentRoute: 'small',
                 name: 'Chinese Money Plant',
                 price: '24.99',
                 type: 'Small Houseplant',
@@ -242,6 +268,7 @@ const shopData = [
             },
             {
                 id: 502,
+                parentRoute: 'small',
                 name: 'Haworthia',
                 price: '39.99',
                 type: 'Small Houseplant',
@@ -250,6 +277,7 @@ const shopData = [
             },
             {
                 id: 503,
+                parentRoute: 'small',
                 name: 'Lucky Bamboo',
                 price: '8.99',
                 type: 'Small Houseplant',
@@ -258,6 +286,7 @@ const shopData = [
             },
             {
                 id: 504,
+                parentRoute: 'small',
                 name: 'Oxalis Triangularis',
                 price: '16.99',
                 type: 'Small Houseplant',
@@ -273,6 +302,7 @@ const shopData = [
         items: [
             {
                 id: 600,
+                parentRoute: 'cacti',
                 name: 'Bunny Ear Cactus',
                 price: '19.99',
                 type: 'Succulent & Cacti Houseplant',
@@ -281,6 +311,7 @@ const shopData = [
             },
             {
                 id: 601,
+                parentRoute: 'cacti',
                 name: "Burro's Tail",
                 price: '49.99',
                 type: 'Succulent & Cacti Houseplant',
@@ -289,6 +320,7 @@ const shopData = [
             },
             {
                 id: 602,
+                parentRoute: 'cacti',
                 name: 'Echeveria Peacockii',
                 price: '24.99',
                 type: 'Succulent & Cacti Houseplant',
@@ -297,6 +329,7 @@ const shopData = [
             },
             {
                 id: 603,
+                parentRoute: 'cacti',
                 name: 'Panda Plant',
                 price: '19.99',
                 type: 'Succulent & Cacti Houseplant',
@@ -305,6 +338,7 @@ const shopData = [
             },
             {
                 id: 604,
+                parentRoute: 'cacti',
                 name: 'Pencil Cactus',
                 price: '24.99',
                 type: 'Succulent & Cacti Houseplant',
@@ -320,6 +354,7 @@ const shopData = [
         items: [
             {
                 id: 700,
+                parentRoute: 'trailing',
                 name: 'Creeping Fig',
                 price: '14.99',
                 type: 'Trailing Houseplant',
@@ -328,6 +363,7 @@ const shopData = [
             },
             {
                 id: 701,
+                parentRoute: 'trailing',
                 name: 'English Ivy',
                 price: '19.99',
                 type: 'Trailing Houseplant',
@@ -336,6 +372,7 @@ const shopData = [
             },
             {
                 id: 702,
+                parentRoute: 'trailing',
                 name: 'Hoya Carnosa Tricolor',
                 price: '14.99',
                 type: 'Trailing Houseplant',
@@ -344,6 +381,7 @@ const shopData = [
             },
             {
                 id: 703,
+                parentRoute: 'trailing',
                 name: 'Rosary Vine',
                 price: '24.99',
                 type: 'Trailing Houseplant',
@@ -352,6 +390,7 @@ const shopData = [
             },
             {
                 id: 704,
+                parentRoute: 'trailing',
                 name: 'String of Pearls',
                 price: '19.99',
                 type: 'Trailing Houseplant',
@@ -360,6 +399,7 @@ const shopData = [
             },
             {
                 id: 705,
+                parentRoute: 'trailing',
                 name: 'Wandering Jew',
                 price: '29.99',
                 type: 'Trailing Houseplant',

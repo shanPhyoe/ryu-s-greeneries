@@ -23,6 +23,7 @@
     & .total-items {
         transform: translateY(2px);
         color: var(--color-primary);
+        user-select: none;
     }
 
     &:hover {

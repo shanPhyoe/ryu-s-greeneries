@@ -50,8 +50,7 @@ const Advantage = () => {
                         style={{ width: '3.6rem', height: '3.6rem' }}
                     />
                     <p className="content__text">
-                        No payment for delivery is required for orders over
-                        $250.
+                        No payment for delivery is required for orders over $50.
                     </p>
                 </li>
             </ul>

@@ -59,7 +59,7 @@ const Footer = () => {
                         </Link>
                     </li>
                     <li className="footer__item">
-                        <Link to="/store" className="footer__link">
+                        <Link to="/shop" className="footer__link">
                             Our Store
                         </Link>
                     </li>

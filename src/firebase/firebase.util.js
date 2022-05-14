@@ -33,6 +33,7 @@ export const createUserDocument = async (userProfile, otherData) => {
                 email,
                 createAt,
                 ...otherData,
+                cartItems: [],
             });
         } catch (error) {
             alert('Error creating user account:', error.message);

@@ -38,6 +38,11 @@ const NavBar = ({ currentUser, signOutStart }) => {
                 {currentUser ? (
                     <li className="navbar__item" onClick={signOutStart}>
                         <Logout className="navbar__icon logout__icon" />
+                        {/* {currentUser ? ( */}
+                        <p className="signed-in-user">
+                            Signed in as {currentUser.displayName.toUpperCase()}
+                        </p>
+                        {/* ) : null} */}
                     </li>
                 ) : (
                     <li className="navbar__item">
@@ -47,7 +52,10 @@ const NavBar = ({ currentUser, signOutStart }) => {
                     </li>
                 )}
                 <li className="navbar__item">
-                    <CartIcon />
+                    {/* to modify for cart popup later */}
+                    <Link to="/checkout">
+                        <CartIcon />
+                    </Link>
                 </li>
             </ul>
         </nav>
