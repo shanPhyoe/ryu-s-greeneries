@@ -14,10 +14,10 @@ import SearchPage from './pages/search/searchpage.component';
 import SignInSignUp from './pages/signin-&-signup/sign-in-&-sign-up.component';
 import CheckOut from './pages/checkout/checkout.component';
 import NotFound from './pages/notfound/not-found.component';
+import CartDropdown from './components/cart-dropdown/cart-dropdown.component';
 import Footer from './components/footer/footer.component';
 
 //test
-import CartDropdown from './components/cart-dropdown/cart-dropdown.component';
 
 import './App.scss';
 

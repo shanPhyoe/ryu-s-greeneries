@@ -9,6 +9,15 @@ export const selectAllPlantsGroups = createSelector(selectPlants, plants =>
     plants ? Object.keys(plants).map(key => plants[key]) : []
 );
 
+export const selectAllPlants = createSelector(
+    selectAllPlantsGroups,
+    plantsGroup => {
+        let plants = [];
+        plantsGroup.forEach(group => plants.push(...group.items));
+        return plants;
+    }
+);
+
 export const selectCategory = memoize(categoryUrl =>
     createSelector(selectAllPlantsGroups, groups =>
         groups.find(group => group.routeName === categoryUrl)

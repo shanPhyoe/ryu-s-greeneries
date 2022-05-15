@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import TypesOverview from '../types-overview/types-overview.component';
+import PlantsList from '../plants-list/plants-list.component';
 
 import { selectAllPlantsGroups } from '../../redux/shop/shop.selector';
 
@@ -13,7 +13,7 @@ const CategoriesOverview = ({ plantsGroups }) => {
         <div className="categories-overview">
             {plantsGroups.map(group => {
                 return (
-                    <TypesOverview
+                    <PlantsList
                         key={group.id}
                         title={group.category}
                         items={group.items.filter((_, index) => index < 3)}

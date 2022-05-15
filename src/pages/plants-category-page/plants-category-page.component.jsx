@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux';
 
 import { selectCategory } from '../../redux/shop/shop.selector';
 
-import TypesOverview from '../../components/types-overview/types-overview.component';
+import PlantsList from '../../components/plants-list/plants-list.component';
 import NotFound from '../notfound/not-found.component';
 import PlantDetails from '../plant-details/plant-details.component';
 
@@ -21,7 +21,7 @@ const PlantsCategoryPage = () => {
                 element={
                     <div className="category-page">
                         {collection ? (
-                            <TypesOverview
+                            <PlantsList
                                 title={collection.category}
                                 items={collection.items}
                                 buttonName="Go Back"

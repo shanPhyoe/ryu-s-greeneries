@@ -5,6 +5,7 @@ import { createStructuredSelector } from 'reselect';
 
 import { selectCurrentUser } from '../../redux/user/user.selector';
 import { signOutStart } from '../../redux/user/user.action';
+import { toggleCartDropdown } from '../../redux/cart/cart.action';
 
 import Logo from '../../assets/img/logo.png';
 
@@ -16,7 +17,7 @@ import { ReactComponent as Logout } from '../../assets/icon/logout.svg';
 
 import './navbar.styles.scss';
 
-const NavBar = ({ currentUser, signOutStart }) => {
+const NavBar = ({ currentUser, signOutStart, toggleCartDropdown }) => {
     return (
         <nav className="navbar">
             <div className="navbar__logo-box">
@@ -49,11 +50,11 @@ const NavBar = ({ currentUser, signOutStart }) => {
                         </Link>
                     </li>
                 )}
-                <li className="navbar__item">
-                    {/* to modify for cart popup later */}
-                    <Link to="/checkout">
-                        <CartIcon />
-                    </Link>
+                <li
+                    className="navbar__item"
+                    onClick={() => toggleCartDropdown()}
+                >
+                    <CartIcon />
                 </li>
             </ul>
         </nav>
@@ -66,6 +67,7 @@ const mapStateToProps = createStructuredSelector({
 
 const mapDispatchToProps = dispatch => ({
     signOutStart: () => dispatch(signOutStart()),
+    toggleCartDropdown: () => dispatch(toggleCartDropdown()),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(NavBar);

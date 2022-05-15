@@ -28,3 +28,11 @@ export const removeItemFromCart = item => ({
 export const clearCart = () => ({
     type: cartActionTypes.CLEAR_CART,
 });
+
+export const toggleCartDropdown = () => ({
+    type: cartActionTypes.TOGGLE_CART_DROPDOWN,
+});
+
+export const hideCartDropdown = () => ({
+    type: cartActionTypes.HIDE_CART_DROPDOWN,
+});

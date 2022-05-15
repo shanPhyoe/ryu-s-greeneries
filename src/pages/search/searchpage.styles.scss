@@ -1,0 +1,21 @@
+.search-page {
+    padding-top: 10rem;
+
+    &__heading {
+        text-align: center;
+        text-transform: uppercase;
+        font-family: var(--font-family-secondary);
+        font-size: var(--font-size-medium);
+        color: var(--color-secondary);
+    }
+
+    & input {
+        margin: 3rem auto;
+    }
+
+    &__empty {
+        text-align: center;
+        margin-top: 6rem;
+        font-size: var(--font-size-small);
+    }
+}

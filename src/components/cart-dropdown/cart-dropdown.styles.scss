@@ -6,11 +6,12 @@
     flex-direction: column;
     gap: 0.5rem;
     border: 3px solid var(--color-white);
-    position: absolute;
+    position: fixed;
     background: var(--color-primary);
-    top: 6rem;
+    top: 8rem;
     right: 5rem;
     z-index: 100;
+    box-shadow: 1rem 1rem 5px rgba(#000, $alpha: 0.3);
 
     &__top {
         background: var(--color-tertiary);
