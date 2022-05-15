@@ -18,6 +18,7 @@ import CartDropdown from './components/cart-dropdown/cart-dropdown.component';
 import Footer from './components/footer/footer.component';
 
 //test
+import Popup from './components/popup/popup.component';
 
 import './App.scss';
 
@@ -51,6 +52,7 @@ class App extends React.Component {
                     <Route path="*" element={<NotFound />} />
                 </Routes>
                 <CartDropdown />
+                <Popup />
                 <Footer />
             </div>
         );

@@ -1,0 +1,14 @@
+.popup {
+    position: fixed;
+    bottom: 3rem;
+    left: 3rem;
+    z-index: 100;
+    text-align: center;
+    height: 4rem;
+    padding: 1rem 2rem;
+    border-radius: 100rem;
+    user-select: none;
+    box-shadow: 0 0.5rem 1rem rgba(#000, 0.4);
+    color: var(--color-white);
+    background-color: rgba(#4caf50, 0.8);
+}

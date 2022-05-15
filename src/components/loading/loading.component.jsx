@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { ReactComponent as Spinner } from '../../assets/icon/leaf.svg';
 
 import './loading.styles.scss';

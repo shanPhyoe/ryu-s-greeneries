@@ -7,11 +7,7 @@ import './aboutus.styles.scss';
 const AboutUs = () => {
     return (
         <header className="about-us">
-            <img
-                src={Image}
-                alt="several houseplants on shelf"
-                className="about-us__image"
-            />
+            <img src={Image} className="about-us__image" />
             <div className="about-us__content">
                 <h2 className="about-us__heading">ABOUT US</h2>
                 <p className="about-us__text">

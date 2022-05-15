@@ -23,11 +23,12 @@
         font-size: var(--font-size-small);
     }
 
+    &__top:hover &__title {
+        color: var(--color-white);
+    }
+
     &__title {
         user-select: none;
-        &:hover {
-            color: var(--color-white);
-        }
     }
 
     &__exit {

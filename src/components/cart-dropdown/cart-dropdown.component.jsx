@@ -17,14 +17,13 @@ import './cart-dropdown.styles.scss';
 
 const containerVariants = {
     hidden: {
-        opacity: 0,
         x: '100vw',
     },
     visible: {
-        opacity: 1,
-        x: '0',
+        x: 0,
         transition: {
             type: 'spring',
+            mass: 0.5,
         },
     },
 };
@@ -34,7 +33,6 @@ const CartDropdown = ({ cartItems, cartDropdown, hideCartDropdown }) => {
         <AnimatePresence>
             {cartDropdown ? (
                 <motion.div
-                    key="modal"
                     className="cart-dropdown"
                     variants={containerVariants}
                     initial="hidden"

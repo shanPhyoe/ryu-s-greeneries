@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
+import { createStructuredSelector } from 'reselect';
 
 import { fetchPlantsInit } from '../../redux/shop/shop.action';
 import { selectFetchingStatus } from '../../redux/shop/shop.selector';
@@ -9,9 +10,12 @@ import Vine from '../../components/vine-animate/vine-animate.component';
 import { ReactComponent as VineOne } from '../../assets/icon/vine-1.svg';
 import CategoriesOverview from '../../components/categories-overview/categories-overview.component';
 import PlantsCategoryPage from '../plants-category-page/plants-category-page.component';
+import WithLoader from '../../components/withLoader/withLoader.component';
 
 import './shoppage.styles.scss';
-import { createStructuredSelector } from 'reselect';
+
+const CategoriesOverviewWithLoader = WithLoader(CategoriesOverview);
+const PlantsCategoryPageWithLoader = WithLoader(PlantsCategoryPage);
 
 const ShopPage = ({ fetchPlantsInit, isFetchingDone }) => {
     useEffect(() => {
@@ -27,10 +31,21 @@ const ShopPage = ({ fetchPlantsInit, isFetchingDone }) => {
                 <Vine Svg={VineOne} />
             </div>
             <Routes>
-                <Route path="" element={<CategoriesOverview />} />
+                <Route
+                    path=""
+                    element={
+                        <CategoriesOverviewWithLoader
+                            isFetchingDone={isFetchingDone}
+                        />
+                    }
+                />
                 <Route
                     path=":plantsCategoryUrl/*"
-                    element={<PlantsCategoryPage />}
+                    element={
+                        <PlantsCategoryPageWithLoader
+                            isFetchingDone={isFetchingDone}
+                        />
+                    }
                 />
             </Routes>
         </div>

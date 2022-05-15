@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { addItemToCart } from '../../redux/cart/cart.action';
+
 import CustomButton from '../custom-button/custom-button.component';
 
 import './item.styles.scss';
