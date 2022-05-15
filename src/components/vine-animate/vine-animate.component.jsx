@@ -16,7 +16,7 @@ const svgVariants = {
     },
 };
 
-const Vine = ({ Svg, startFromLeftCenter }) => {
+const Vine = ({ Svg }) => {
     return (
         <motion.div
             className="vine__container"

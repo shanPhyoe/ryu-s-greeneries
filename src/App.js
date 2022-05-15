@@ -16,8 +16,10 @@ import CheckOut from './pages/checkout/checkout.component';
 import NotFound from './pages/notfound/not-found.component';
 import Footer from './components/footer/footer.component';
 
+//test
+import CartDropdown from './components/cart-dropdown/cart-dropdown.component';
+
 import './App.scss';
-import Loading from './components/loading/loading.component';
 
 class App extends React.Component {
     componentDidMount() {
@@ -47,8 +49,8 @@ class App extends React.Component {
                     />
                     <Route path="/checkout" element={<CheckOut />} />
                     <Route path="*" element={<NotFound />} />
-                    <Route path="/loading" element={<Loading />} />
                 </Routes>
+                <CartDropdown />
                 <Footer />
             </div>
         );

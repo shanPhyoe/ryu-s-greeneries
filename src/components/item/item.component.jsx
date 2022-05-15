@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 
 import { addItemToCart } from '../../redux/cart/cart.action';
+import CustomButton from '../custom-button/custom-button.component';
 
 import './item.styles.scss';
 
@@ -14,7 +15,9 @@ const Item = ({ item, addItem }) => {
             <div className="item__img-container">
                 <div className="item__overlay" />
                 <div className="item__button" onClick={() => addItem(item)}>
-                    Add to Cart
+                    <CustomButton isSquared fontDefault>
+                        Add to Cart
+                    </CustomButton>
                 </div>
                 <img src={imageUrl} alt="plant" className="item__image" />
             </div>
