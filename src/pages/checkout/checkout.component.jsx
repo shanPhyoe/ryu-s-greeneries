@@ -13,6 +13,7 @@ import { ReactComponent as Cart } from '../../assets/icon/cart.svg';
 import CheckoutItem from '../../components/checkout-item/checkout-item.component';
 
 import './checkout.styles.scss';
+import StripeCheckoutButton from '../../components/stripe-button/stripe-button.component';
 
 const CheckOut = ({ allCartItems, totalQuantity, totalType, totalPrice }) => {
     const shippingFee = 8;
@@ -69,6 +70,9 @@ const CheckOut = ({ allCartItems, totalQuantity, totalType, totalPrice }) => {
                             {(totalPrice + totalShipping).toFixed(2)}
                         </div>
                     </div>
+                    <StripeCheckoutButton
+                        price={(totalPrice + totalShipping).toFixed(2)}
+                    />
                 </div>
             </div>
         </div>

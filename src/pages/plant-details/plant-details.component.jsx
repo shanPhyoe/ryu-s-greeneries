@@ -42,13 +42,6 @@ const PlantDetails = ({ addItem }) => {
                                 <span className="details__price">
                                     ${plant.price}
                                 </span>
-                                {/* <div className="details__vine-container">
-                                    <img
-                                        src={Image}
-                                        alt="vine"
-                                        className="details__vine"
-                                    />
-                                </div> */}
                                 <p className="details__about">{plant.about}</p>
                                 <CustomButton onClick={() => addItem(plant)}>
                                     Add to Cart

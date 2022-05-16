@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
+import Image from '../../assets/img/ivy-art-3.png';
+
 import { selectAllPlants } from '../../redux/shop/shop.selector';
 
 import SearchBar from '../../components/search-bar/search-bar.component';
 import PlantsList from '../../components/plants-list/plants-list.component';
+import ScrollToReveal from '../../components/scroll-to-reveal/scroll-to-reveal.component';
 
 import './searchpage.styles.scss';
 
@@ -22,6 +25,9 @@ const SearchPage = ({ allPlants }) => {
 
     return (
         <div className="search-page">
+            <ScrollToReveal threshold=".2" fromTop={true}>
+                <img src={Image} className="search-page__art" />
+            </ScrollToReveal>
             <h3 className="search-page__heading">
                 Which plant are you looking for?
             </h3>

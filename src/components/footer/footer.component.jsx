@@ -54,11 +54,6 @@ const Footer = () => {
                         </Link>
                     </li>
                     <li className="footer__item">
-                        <Link to="/faq" className="footer__link">
-                            FAQs
-                        </Link>
-                    </li>
-                    <li className="footer__item">
                         <Link to="/shop" className="footer__link">
                             Our Store
                         </Link>

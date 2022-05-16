@@ -45,6 +45,9 @@
     & .summary {
         position: relative;
         width: 35rem;
+        display: flex;
+        flex-direction: column;
+        // align-items: center;
 
         &__box {
             border: 2px solid var(--color-tertiary);
@@ -76,5 +79,10 @@
             font-size: var(--font-size-medium);
             border-top: 2px solid var(--color-tertiary);
         }
+    }
+
+    & button {
+        margin-top: 3rem;
+        align-self: center;
     }
 }

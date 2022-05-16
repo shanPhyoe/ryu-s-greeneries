@@ -1,0 +1,23 @@
+.scroll-to-reveal {
+    z-index: -100;
+    overflow: hidden;
+}
+
+.reveal-from-left {
+    width: 0;
+    transition: width 4s ease-in-out;
+
+    &.reveal {
+        width: 100vw;
+    }
+}
+
+.reveal-from-top {
+    width: 100%;
+    transition: height 4s ease-in-out;
+    height: 0;
+
+    &.reveal {
+        height: 100rem;
+    }
+}

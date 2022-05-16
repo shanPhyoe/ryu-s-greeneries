@@ -1,9 +1,21 @@
 .types-overview {
+    position: relative;
     &__heading {
         text-align: center;
         font-family: var(--font-family-secondary);
         font-size: var(--font-size-medium);
         margin-bottom: 3rem;
+    }
+
+    & > .scroll-to-reveal {
+        position: absolute;
+        top: 30%;
+        left: 0rem;
+    }
+
+    &__art {
+        opacity: 0.5;
+        width: 70vw;
     }
 
     &__container {
