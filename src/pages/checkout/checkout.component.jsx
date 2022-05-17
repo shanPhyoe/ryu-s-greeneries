@@ -72,6 +72,7 @@ const CheckOut = ({ allCartItems, totalQuantity, totalType, totalPrice }) => {
                     </div>
                     <StripeCheckoutButton
                         price={(totalPrice + totalShipping).toFixed(2)}
+                        cartItems={allCartItems}
                     />
                 </div>
             </div>
