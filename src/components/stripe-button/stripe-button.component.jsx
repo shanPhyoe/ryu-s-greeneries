@@ -12,7 +12,7 @@ const StripeCheckoutButton = ({ cartItems, price }) => {
     });
 
     const onToken = token => {
-        fetch('http://localhost:5000/payment', {
+        fetch('https://ryus-greeneries-server.herokuapp.com/payment', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
