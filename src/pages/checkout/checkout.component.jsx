@@ -70,10 +70,12 @@ const CheckOut = ({ allCartItems, totalQuantity, totalType, totalPrice }) => {
                             {(totalPrice + totalShipping).toFixed(2)}
                         </div>
                     </div>
-                    <StripeCheckoutButton
-                        price={(totalPrice + totalShipping).toFixed(2)}
-                        cartItems={allCartItems}
-                    />
+                    {totalQuantity ? (
+                        <StripeCheckoutButton
+                            price={(totalPrice + totalShipping).toFixed(2)}
+                            cartItems={allCartItems}
+                        />
+                    ) : null}
                 </div>
             </div>
         </div>

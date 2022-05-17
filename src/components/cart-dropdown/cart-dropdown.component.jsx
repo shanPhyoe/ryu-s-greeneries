@@ -66,7 +66,11 @@ const CartDropdown = ({ cartItems, cartDropdown, hideCartDropdown }) => {
                         )}
                     </div>
                     <Link to="/checkout">
-                        <CustomButton isSquared isGrey>
+                        <CustomButton
+                            isSquared
+                            isGrey
+                            onClick={() => hideCartDropdown()}
+                        >
                             Proceed to Checkout
                         </CustomButton>
                     </Link>

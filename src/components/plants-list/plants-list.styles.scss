@@ -11,11 +11,31 @@
         position: absolute;
         top: 30%;
         left: 0rem;
+
+        @media (max-width: 1280px) {
+            top: 45%;
+        }
+
+        @media (max-width: 768px) {
+            top: 70%;
+        }
+
+        @media (max-width: 520px) {
+            top: 85%;
+        }
+
+        @media (max-width: 470px) {
+            top: 90%;
+        }
     }
 
     &__art {
         opacity: 0.5;
         width: 70vw;
+
+        @media (max-width: 768px) {
+            width: 85vw;
+        }
     }
 
     &__container {

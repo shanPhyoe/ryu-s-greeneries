@@ -19,7 +19,6 @@ const StripeCheckoutButton = ({ cartItems, price }) => {
             },
             body: JSON.stringify({
                 items: items,
-                amount: price,
                 token,
             }),
         })
@@ -27,7 +26,7 @@ const StripeCheckoutButton = ({ cartItems, price }) => {
                 alert('Payment successful!');
             })
             .catch(error => {
-                console.log(error);
+                // console.log(error);
                 alert(
                     'There was an issuse with your payment. Please make sure your use the correct TEST credit card details!'
                 );

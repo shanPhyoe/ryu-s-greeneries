@@ -1,11 +1,23 @@
 .search {
     text-align: center;
-    width: 30vw;
+    width: 35vw;
     padding: 1.5rem;
     display: block;
-    font-size: var(--font-size-small);
+    font-size: var(--font-size-default);
     font-family: inherit;
     border: 2px solid var(--color-tertiary);
+
+    @media (max-width: 768px) {
+        width: 50vw;
+    }
+
+    @media (max-width: 530px) {
+        width: 75vw;
+    }
+
+    @media (max-width: 360px) {
+        width: 85vw;
+    }
 
     &:focus {
         outline: none;

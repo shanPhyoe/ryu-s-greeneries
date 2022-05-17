@@ -3,7 +3,12 @@
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    padding: 2rem;
+    padding: 2rem 0;
+
+    @media (max-width: 580px) {
+        justify-content: space-around;
+        gap: 2rem;
+    }
 
     &:not(:last-child) {
         border-bottom: 1px solid var(--color-tertiary);
@@ -13,6 +18,11 @@
         width: 20rem;
         height: 20rem;
         border: 2px solid var(--color-white);
+
+        @media (max-width: 600px) {
+            width: 15rem;
+            height: 15rem;
+        }
     }
 
     &__details {
@@ -21,6 +31,10 @@
         flex-direction: column;
         gap: 2rem;
         align-items: flex-end;
+
+        @media (max-width: 600px) {
+            margin-left: 2rem;
+        }
     }
 
     &__quantity {
@@ -29,11 +43,18 @@
     }
 
     &__buttons {
+        min-width: 30rem;
         margin-left: auto;
         display: flex;
+        flex-wrap: wrap;
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
+
+        @media (max-width: 580px) {
+            margin-left: 0;
+            align-items: center;
+        }
     }
 
     &__name {
@@ -56,8 +77,8 @@
         align-items: center;
 
         &--small {
-            width: 2rem;
-            height: 2rem;
+            width: 3rem;
+            height: 3rem;
         }
 
         &--big {
