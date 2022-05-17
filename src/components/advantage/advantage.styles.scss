@@ -2,11 +2,20 @@
     margin: 12rem 0;
     padding: 0 6rem;
 
+    @media (max-width: 720px) {
+        margin: 6rem 0;
+        padding: 0 3rem;
+    }
+
     &__title {
         font-family: var(--font-family-secondary);
         font-size: var(--font-size-large);
         text-align: center;
         margin-bottom: 6rem;
+
+        @media (max-width: 720px) {
+            margin-bottom: 3rem;
+        }
     }
 
     & .content {
@@ -14,11 +23,20 @@
         margin: 0 auto;
         width: 60rem;
 
+        @media (max-width: 720px) {
+            width: 100%;
+        }
+
         &__list {
             display: flex;
             align-items: center;
             gap: 3rem;
             margin-bottom: 2rem;
+
+            @media (max-width: 720px) {
+                flex-direction: column;
+                gap: 1rem;
+            }
         }
 
         &__icon {
@@ -35,6 +53,10 @@
             font-size: var(--font-size-default);
             line-height: 1.7;
             display: inline-block;
+
+            @media (max-width: 720px) {
+                text-align: center;
+            }
         }
     }
 }

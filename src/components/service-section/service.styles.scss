@@ -6,11 +6,20 @@
         font-family: var(--font-family-secondary);
         font-size: var(--font-size-large);
         margin-bottom: 6rem;
+
+        @media (max-width: 480px) {
+            margin-bottom: 3rem;
+        }
     }
 
     &__services {
         display: flex;
         gap: 4rem;
         justify-content: center;
+        flex-wrap: wrap;
+
+        @media (max-width: 480px) {
+            gap: 2rem;
+        }
     }
 }

@@ -31,7 +31,6 @@ const SignIn = ({ setSignInSession, googleSignInStart, emailSignInStart }) => {
 
     const handleSubmit = event => {
         event.preventDefault();
-        console.log('hey');
         emailSignInStart(email, password);
     };
 

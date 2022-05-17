@@ -9,8 +9,16 @@
     position: absolute;
     z-index: 100;
 
+    @media (max-width: 600px) {
+        padding: 0 2rem;
+    }
+
     &__logo-box {
         width: 16rem;
+
+        @media (max-width: 380px) {
+            width: 10rem;
+        }
     }
 
     &__logo {
@@ -23,6 +31,10 @@
         justify-content: space-around;
         align-items: center;
         gap: 4rem;
+
+        @media (max-width: 600px) {
+            gap: 3rem;
+        }
     }
 
     &__link {
@@ -37,6 +49,11 @@
     &__icon {
         width: 3.6rem;
         height: 3.6rem;
+
+        @media (max-width: 420px) {
+            height: 3rem;
+            width: 3rem;
+        }
 
         &:hover {
             cursor: pointer;

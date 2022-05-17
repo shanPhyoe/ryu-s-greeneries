@@ -33,6 +33,10 @@
         gap: 3rem;
         width: fit-content;
         margin: 6rem auto;
+
+        @media (max-width: 900px) {
+            flex-direction: column;
+        }
     }
 
     &__details {
@@ -40,6 +44,11 @@
         overflow: hidden;
         padding: 0 2rem;
         border: 2px solid var(--color-tertiary);
+
+        @media (max-width: 720px) {
+            width: 90vw;
+            margin: 0 auto;
+        }
     }
 
     & .summary {
