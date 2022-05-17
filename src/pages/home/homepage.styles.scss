@@ -1,0 +1,18 @@
+.homepage {
+    position: relative;
+
+    & > .scroll-to-reveal {
+        position: absolute;
+
+        &.reveal {
+            height: 130rem;
+        }
+    }
+
+    &__image {
+        width: 40rem;
+        position: absolute;
+        right: 0;
+        opacity: 0.7;
+    }
+}

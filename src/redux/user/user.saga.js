@@ -1,6 +1,6 @@
 import { put, takeLatest, all, call } from 'redux-saga/effects';
 
-import userTypes from './user.types';
+import userActionTypes from './user.types';
 
 import {
     auth,
@@ -44,7 +44,7 @@ export function* checkCurrentUser() {
     }
 }
 export function* onCheckCurrentUser() {
-    yield takeLatest(userTypes.CHECK_CURRENT_USER, checkCurrentUser);
+    yield takeLatest(userActionTypes.CHECK_CURRENT_USER, checkCurrentUser);
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -69,10 +69,10 @@ export function* signInAfterSignUp({ payload: { user, otherData } }) {
     }
 }
 export function* onSignUpSuccess() {
-    yield takeLatest(userTypes.SIGN_UP_SUCCESS, signInAfterSignUp);
+    yield takeLatest(userActionTypes.SIGN_UP_SUCCESS, signInAfterSignUp);
 }
 export function* onSignUpStart() {
-    yield takeLatest(userTypes.SIGN_UP_START, signUp);
+    yield takeLatest(userActionTypes.SIGN_UP_START, signUp);
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -88,7 +88,7 @@ export function* emailSignIn({ payload: { email, password } }) {
     }
 }
 export function* onEmailSignInStart() {
-    yield takeLatest(userTypes.EMAIL_SIGN_IN_START, emailSignIn);
+    yield takeLatest(userActionTypes.EMAIL_SIGN_IN_START, emailSignIn);
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -103,7 +103,7 @@ export function* googleSignIn() {
     }
 }
 export function* onGoogleSignInStart() {
-    yield takeLatest(userTypes.GOOGLE_SIGN_IN_START, googleSignIn);
+    yield takeLatest(userActionTypes.GOOGLE_SIGN_IN_START, googleSignIn);
 }
 
 ////////////////////////////////////////////////////////////////////
@@ -117,7 +117,7 @@ export function* userSignOut() {
     }
 }
 export function* onSignOutStart() {
-    yield takeLatest(userTypes.SIGN_OUT_START, userSignOut);
+    yield takeLatest(userActionTypes.SIGN_OUT_START, userSignOut);
 }
 
 export function* userSagas() {

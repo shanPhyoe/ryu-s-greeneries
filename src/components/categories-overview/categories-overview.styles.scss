@@ -1,0 +1,7 @@
+.categories-overview {
+    margin: 3rem 0;
+
+    & .types-overview:not(:last-child) {
+        margin-bottom: 8rem;
+    }
+}

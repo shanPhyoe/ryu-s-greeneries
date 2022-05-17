@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 
 import sprite from '../../assets/icon/sprite.svg';
+
 import { setSignInSession } from '../../redux/sign-in-sign-up/sign-in-sign-up.action';
 import {
     googleSignInStart,

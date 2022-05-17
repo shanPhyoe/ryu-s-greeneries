@@ -43,6 +43,14 @@
             fill: var(--color-secondary);
         }
     }
+
+    & .signed-in-user {
+        position: absolute;
+        right: 6rem;
+        bottom: 0;
+        opacity: 0;
+        transition: opacity 0.8s;
+    }
 }
 
 .login__icon {
@@ -56,6 +64,10 @@
     fill: var(--color-black);
 
     &:hover {
-        fill: red;
+        fill: var(--color-red);
+    }
+
+    &:hover + .signed-in-user {
+        opacity: 1;
     }
 }

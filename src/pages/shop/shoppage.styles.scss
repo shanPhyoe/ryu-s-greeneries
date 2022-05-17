@@ -1,0 +1,31 @@
+.shop-page {
+    padding-top: 10rem;
+    margin: 0 auto;
+    position: relative;
+
+    &__heading {
+        width: 40rem;
+        margin: 0 auto 3rem;
+        text-align: center;
+
+        &--text {
+            color: var(--color-secondary);
+            font-family: var(--font-family-secondary);
+            font-size: var(--font-size-large);
+        }
+
+        & > .scroll-to-reveal {
+            height: 10rem;
+            position: relative;
+        }
+
+        &--icon {
+            width: 40rem;
+            height: 15rem;
+            transform: scaleY(0.6);
+            position: absolute;
+            top: -5rem;
+            left: 0;
+        }
+    }
+}

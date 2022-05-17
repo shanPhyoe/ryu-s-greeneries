@@ -1,0 +1,36 @@
+.cart-icon {
+    position: relative;
+    & .shop-icon {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    & .total-items-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        right: 1rem;
+        border: 1px solid var(--color-secondary);
+        border-radius: 50%;
+        width: 2rem;
+        height: 2rem;
+        background: var(--color-secondary);
+        top: -0.5rem;
+        right: -1rem;
+    }
+
+    & .total-items {
+        transform: translateY(2px);
+        color: var(--color-primary);
+        user-select: none;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover .shop-icon {
+        fill: var(--color-secondary);
+    }
+}

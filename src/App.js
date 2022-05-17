@@ -12,7 +12,13 @@ import AboutPage from './pages/about/aboutpage.component';
 import ShopPage from './pages/shop/shoppage.component';
 import SearchPage from './pages/search/searchpage.component';
 import SignInSignUp from './pages/signin-&-signup/sign-in-&-sign-up.component';
+import CheckOut from './pages/checkout/checkout.component';
+import NotFound from './pages/notfound/not-found.component';
+import CartDropdown from './components/cart-dropdown/cart-dropdown.component';
 import Footer from './components/footer/footer.component';
+
+//test
+import Popup from './components/popup/popup.component';
 
 import './App.scss';
 
@@ -28,22 +34,25 @@ class App extends React.Component {
             <div className="App">
                 <NavBar />
                 <Routes>
-                    <Route exact path="/" element={<HomePage />} />
-                    <Route exact path="/about" element={<AboutPage />} />
-                    <Route path="/shop" element={<ShopPage />} />
-                    <Route exact path="/search" element={<SearchPage />} />
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/about" element={<AboutPage />} />
+                    <Route path="/shop/*" element={<ShopPage />} />
+                    <Route path="/search" element={<SearchPage />} />
                     <Route
-                        exact
                         path="/join"
                         element={
                             currentUser ? (
-                                <Navigate to="/" replace />
+                                <Navigate replace to="/" />
                             ) : (
                                 <SignInSignUp />
                             )
                         }
                     />
+                    <Route path="/checkout" element={<CheckOut />} />
+                    <Route path="*" element={<NotFound />} />
                 </Routes>
+                <CartDropdown />
+                <Popup />
                 <Footer />
             </div>
         );

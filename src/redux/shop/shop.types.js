@@ -1,0 +1,7 @@
+const shopActionTypes = {
+    FETCH_PLANTS_INIT: 'FETCH_PLANTS_INIT',
+    FETCH_PLANTS_SUCCESS: 'FETCH_PLANTS_SUCCESS',
+    FETCH_PLANTS_FAILURE: 'FETCH_PLANTS_FAILURE',
+};
+
+export default shopActionTypes;

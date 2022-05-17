@@ -1,0 +1,80 @@
+.plant-details-page {
+    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.panels {
+    position: relative;
+    max-width: 120rem;
+    margin: 0 auto 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6rem;
+
+    &__panel {
+        width: 50rem;
+    }
+
+    &__image-container {
+        display: flex;
+        justify-content: center;
+
+        &::before {
+            z-index: -10;
+            content: '';
+            width: 40rem;
+            height: 40rem;
+            background: var(--color-secondary);
+            opacity: 0.8;
+            position: absolute;
+            transform: translate(3rem, 3rem);
+        }
+    }
+
+    &__image {
+        width: 40rem;
+        height: 40rem;
+        border: 2px solid var(--color-white);
+    }
+
+    & .details {
+        padding: 0 3rem;
+
+        &__heading {
+            font-family: var(--font-family-secondary);
+            font-size: var(--font-size-large);
+        }
+
+        &__sub-heading {
+            font-family: var(--font-family-secondary);
+            font-size: var(--font-size-small);
+        }
+
+        &__price {
+            color: var(--color-secondary);
+            font-size: var(--font-size-medium);
+        }
+
+        // &__vine-container {
+        //     position: relative;
+        //     height: 2rem;
+        // }
+
+        // &__vine {
+        //     position: absolute;
+        //     left: 0;
+        //     top: -6rem;
+        //     z-index: -10;
+        //     opacity: 0.6;
+        //     // width: 90rem;
+        //     // height: 30rem;
+        // }
+
+        &__about {
+            margin: 4rem 0 4rem;
+        }
+    }
+}

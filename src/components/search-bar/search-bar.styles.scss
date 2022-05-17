@@ -1,0 +1,14 @@
+.search {
+    text-align: center;
+    width: 30vw;
+    padding: 1.5rem;
+    display: block;
+    font-size: var(--font-size-small);
+    font-family: inherit;
+    border: 2px solid var(--color-tertiary);
+
+    &:focus {
+        outline: none;
+        border: 2px solid var(--color-secondary);
+    }
+}
