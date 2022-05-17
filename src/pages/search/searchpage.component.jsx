@@ -26,7 +26,7 @@ const SearchPage = ({ allPlants }) => {
     return (
         <div className="search-page">
             <ScrollToReveal threshold=".2" fromTop={true}>
-                <img src={Image} className="search-page__art" />
+                <img src={Image} className="search-page__art" alt="" />
             </ScrollToReveal>
             <h3 className="search-page__heading">
                 Which plant are you looking for?

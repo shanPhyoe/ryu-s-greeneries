@@ -15,7 +15,7 @@ const HomePage = () => {
             <Header />
             <ScrollToReveal threshold="0.1" fromTop={true}>
                 {/* This image is from vecteezy.com */}
-                <img src={Image} className="homepage__image" />
+                <img src={Image} className="homepage__image" alt="" />
             </ScrollToReveal>
             <TopSelling />
             <Advantage />

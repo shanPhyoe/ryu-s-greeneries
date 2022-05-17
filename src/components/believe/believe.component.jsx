@@ -22,11 +22,7 @@ const Believe = () => {
                     your accommodation.
                 </p>
             </div>
-            <img
-                src={Image}
-                alt="several houseplants"
-                className="section-believe__image"
-            />
+            <img src={Image} alt="" className="section-believe__image" />
         </section>
     );
 };

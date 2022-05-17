@@ -20,7 +20,7 @@ const PlantsCategoryPageWithLoader = WithLoader(PlantsCategoryPage);
 const ShopPage = ({ fetchPlantsInit, isFetchingDone }) => {
     useEffect(() => {
         !isFetchingDone && fetchPlantsInit();
-    }, []);
+    }, [isFetchingDone, fetchPlantsInit]);
 
     return (
         <div className="shop-page">

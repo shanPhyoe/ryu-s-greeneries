@@ -20,7 +20,7 @@ const Item = ({ item, addItem }) => {
                         Add to Cart
                     </CustomButton>
                 </div>
-                <img src={imageUrl} alt="plant" className="item__image" />
+                <img src={imageUrl} alt="" className="item__image" />
             </div>
             <Link to={`/shop/${parentRoute}/${id}`} className="item__link">
                 <div className="item__detail">
