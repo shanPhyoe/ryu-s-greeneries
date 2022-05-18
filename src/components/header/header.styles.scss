@@ -1,8 +1,11 @@
 .header {
     width: 100vw;
-    height: 62rem;
+    height: 80rem;
     position: relative;
 
+    @media (max-width: 1440px) {
+        height: 65rem;
+    }
     @media (max-width: 1280px) {
         height: 52rem;
     }
