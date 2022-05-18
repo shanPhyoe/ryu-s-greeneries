@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
-import Image from '../../assets/img/ivy-art-3.png';
+import Image from '../../assets/img/ivy-art-2.png';
 
 import { selectAllPlants } from '../../redux/shop/shop.selector';
 

@@ -3,12 +3,19 @@
     --color-black: #000;
     --color-white: #fff;
     --color-red: red;
-    --color-primary: #e5e9ec;
-    --color-secondary: #4caf50;
-    --color-tertiary: #c4c4c4;
 
-    --font-family-primary: 'Josefin Sans', sans-serif;
-    --font-family-secondary: 'Raleway', sans-serif;
+    --color-primary: #e5e9ec;
+    --color-primary-light: #e9fcf8;
+    --color-primary-dark: #c3e1e5;
+
+    --color-secondary: #4caf50;
+    --color-secondary-light: #b2fbad;
+
+    --color-tertiary: #c4c4c4;
+    --color-tertiary-dark: #444;
+
+    --font-family-primary: 'Lora', serif;
+    --font-family-secondary: 'Merriweather', sans-serif;
 
     --font-size-tiny: 1.2rem;
     --font-size-default: 1.6rem;
@@ -38,7 +45,7 @@ html {
 body {
     font-family: var(--font-family-primary);
     font-size: var(--font-size-default);
-    background-color: var(--color-primary);
+    background: var(--color-primary-light);
     overflow-x: hidden;
     line-height: 1.7;
 }

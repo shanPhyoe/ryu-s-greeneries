@@ -1,0 +1,36 @@
+.best-sellers {
+    margin: 12rem 0;
+    position: relative;
+
+    & > .scroll-to-reveal {
+        position: absolute;
+        top: 20%;
+        left: 0;
+
+        @media (max-width: 1280px) {
+            top: 30%;
+        }
+        @media (max-width: 1080px) {
+            top: 40%;
+        }
+        @media (max-width: 768px) {
+            top: 30%;
+        }
+        @media (max-width: 530px) {
+            top: 90%;
+        }
+    }
+
+    &__art {
+        width: 85vw;
+        opacity: 0.8;
+        @media (max-width: 530px) {
+            width: 95vw;
+        }
+    }
+
+    & h3 {
+        letter-spacing: 0.3em;
+        text-transform: uppercase;
+    }
+}

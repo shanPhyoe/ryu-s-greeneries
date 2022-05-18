@@ -43,13 +43,16 @@ const PlantDetails = ({ addItem }) => {
                                     ${plant.price}
                                 </span>
                                 <p className="details__about">{plant.about}</p>
-                                <CustomButton onClick={() => addItem(plant)}>
+                                <CustomButton
+                                    isGreen
+                                    onClick={() => addItem(plant)}
+                                >
                                     Add to Cart
                                 </CustomButton>
                             </div>
                         </div>
                     </div>
-                    <CustomButton onClick={() => navigate(-1)}>
+                    <CustomButton isDefault onClick={() => navigate(-1)}>
                         Go Back
                     </CustomButton>
                 </>

@@ -56,19 +56,16 @@
         width: 35rem;
         display: flex;
         flex-direction: column;
-        // align-items: center;
 
         &__box {
             border: 2px solid var(--color-tertiary);
-            //test
-            // background-color: var(--color-white);
         }
 
         &__heading {
             text-align: center;
             font-size: var(--font-size-large);
             font-family: var(--font-family-secondary);
-            background: var(--color-tertiary);
+            background: var(--color-tertiary-dark);
             color: var(--color-white);
             margin-bottom: 1rem;
         }

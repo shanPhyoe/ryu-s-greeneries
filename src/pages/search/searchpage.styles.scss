@@ -1,25 +1,31 @@
 .search-page {
     padding-top: 10rem;
-    min-height: 50vh;
 
     & > .scroll-to-reveal {
         position: absolute;
-        top: 0;
+        top: 13rem;
         display: flex;
         justify-content: center;
+
+        @media (max-width: 435px) {
+            top: 15rem;
+        }
     }
 
     &__art {
         position: absolute;
         width: 60vw;
         z-index: -100;
-        opacity: 0.7;
+
+        @media (max-width: 768px) {
+            width: 100%;
+        }
     }
 
     &__heading {
         text-align: center;
         text-transform: uppercase;
-        text-shadow: var(--color-white) 3px 1px;
+        text-shadow: var(--color-white) 1px 1px;
         font-family: var(--font-family-secondary);
         font-size: var(--font-size-medium);
         color: var(--color-secondary);
@@ -30,8 +36,9 @@
     }
 
     &__empty {
+        height: calc(100vh - 70rem);
         text-align: center;
-        margin: 12rem;
+        margin: 8rem;
         font-size: var(--font-size-small);
     }
 }

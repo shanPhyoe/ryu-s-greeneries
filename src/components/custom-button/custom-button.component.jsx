@@ -8,16 +8,17 @@ const CustomButton = ({
     isGrey,
     isSquared,
     isGoogleButton,
-    fontDefault,
+    isItemButton,
+    isDefault,
     ...otherProps
 }) => {
     return (
         <button
             className={`custom-button ${isGreen ? 'green' : ''} ${
                 isGoogleButton ? 'google-button' : ''
-            } ${isGrey ? 'grey' : ''} ${isSquared ? 'square' : ''} ${
-                fontDefault ? 'font-default' : ''
-            }`}
+            } ${isGrey ? 'grey' : ''} ${isDefault ? 'default' : ''} ${
+                isSquared ? 'square' : ''
+            } ${isItemButton ? 'item-button' : ''}`}
             {...otherProps}
         >
             {children}

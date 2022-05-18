@@ -16,9 +16,7 @@ const Item = ({ item, addItem }) => {
             <div className="item__img-container">
                 <div className="item__overlay" />
                 <div className="item__button" onClick={() => addItem(item)}>
-                    <CustomButton isSquared fontDefault>
-                        Add to Cart
-                    </CustomButton>
+                    <CustomButton isItemButton>Add to Cart</CustomButton>
                 </div>
                 <img src={imageUrl} alt="" className="item__image" />
             </div>
