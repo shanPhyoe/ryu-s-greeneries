@@ -13,7 +13,7 @@ const PlantsList = ({ title, items, buttonName, buttonLink }) => {
     return (
         <div className="types-overview">
             {title && <h3 className="types-overview__heading">{title}</h3>}
-            <ScrollToReveal fromLeft={true} threshold=".3">
+            <ScrollToReveal fromLeft={true} threshold=".3" triggeredOnce={true}>
                 <img src={Ivy} className="types-overview__art" alt="" />
             </ScrollToReveal>
             <div className="types-overview__container">
