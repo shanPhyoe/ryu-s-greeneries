@@ -9,8 +9,17 @@
     @media (max-width: 1280px) {
         height: 52rem;
     }
+    @media (max-width: 900px) {
+        height: 47rem;
+    }
     @media (max-width: 480px) {
-        height: 43rem;
+        height: 40rem;
+    }
+    @media (max-width: 400px) {
+        height: 33rem;
+    }
+    @media (max-width: 340px) {
+        height: 29rem;
     }
 
     &__image-container {

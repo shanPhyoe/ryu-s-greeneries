@@ -21,7 +21,7 @@
     }
 
     & .total-items {
-        transform: translateY(2px);
+        font-size: var(--font-size-tiny);
         color: var(--color-primary);
         user-select: none;
     }

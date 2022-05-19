@@ -1,19 +1,27 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
 
 import Image from '../../assets/img/ivy-art-2.png';
 
-import { selectAllPlants } from '../../redux/shop/shop.selector';
+import {
+    selectAllPlants,
+    selectFetchingStatus,
+} from '../../redux/shop/shop.selector';
 
 import SearchBar from '../../components/search-bar/search-bar.component';
 import PlantsList from '../../components/plants-list/plants-list.component';
 import ScrollToReveal from '../../components/scroll-to-reveal/scroll-to-reveal.component';
 
 import './searchpage.styles.scss';
+import { fetchPlantsInit } from '../../redux/shop/shop.action';
 
-const SearchPage = ({ allPlants }) => {
+const SearchPage = ({ allPlants, isFetchingDone, fetchPlantsInit }) => {
     const [searchField, setSearchField] = useState('');
+
+    useEffect(() => {
+        !isFetchingDone && fetchPlantsInit();
+    }, [isFetchingDone, fetchPlantsInit]);
 
     const handleChange = event => {
         setSearchField(event.target.value);
@@ -46,6 +54,11 @@ const SearchPage = ({ allPlants }) => {
 
 const mapStateToProps = createStructuredSelector({
     allPlants: selectAllPlants,
+    isFetchingDone: selectFetchingStatus,
 });
 
-export default connect(mapStateToProps)(SearchPage);
+const mapDispatchToProps = dispatch => ({
+    fetchPlantsInit: () => dispatch(fetchPlantsInit()),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchPage);

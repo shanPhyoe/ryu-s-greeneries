@@ -11,7 +11,7 @@ import './best-sellers.styles.scss';
 const BestSellers = () => {
     return (
         <div className="best-sellers">
-            <ScrollToReveal fromLeft={true} threshold=".3">
+            <ScrollToReveal fromLeft={true} threshold=".3" triggeredOnce>
                 <img src={Ivy} alt="" className="best-sellers__art" />
             </ScrollToReveal>
             <PlantsList

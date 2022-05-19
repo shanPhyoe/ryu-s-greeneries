@@ -1,7 +1,60 @@
 .categories-overview {
+    position: relative;
     margin: 0;
 
     & .types-overview:not(:last-child) {
         margin-bottom: 8rem;
+    }
+
+    &__art {
+        position: absolute;
+        user-select: none;
+        z-index: -100;
+
+        &--1 {
+            top: -1%;
+
+            @media (max-width: 768px) {
+                width: 100%;
+                top: 8%;
+            }
+        }
+        &--2 {
+            top: 24%;
+            right: 0rem;
+
+            @media (max-width: 900px) {
+                width: 100%;
+            }
+        }
+        &--3 {
+            width: 30rem;
+            top: 35%;
+            left: -3rem;
+        }
+        &--4 {
+            width: 40rem;
+            top: 55%;
+            right: -3%;
+
+            @media (max-width: 720px) {
+                width: 30rem;
+                top: 60%;
+            }
+        }
+        &--5 {
+            top: 82%;
+            left: -1rem;
+
+            @media (max-width: 1080px) {
+                width: 80vw;
+            }
+            @media (max-width: 768px) {
+                width: 100vw;
+            }
+            @media (max-width: 528px) {
+                top: 84%;
+            }
+        }
     }
 }

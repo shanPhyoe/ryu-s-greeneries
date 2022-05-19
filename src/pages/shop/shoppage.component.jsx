@@ -7,6 +7,7 @@ import { fetchPlantsInit } from '../../redux/shop/shop.action';
 import { selectFetchingStatus } from '../../redux/shop/shop.selector';
 
 import { ReactComponent as Icon } from '../../assets/icon/vine-1.svg';
+
 import CategoriesOverview from '../../components/categories-overview/categories-overview.component';
 import PlantsCategoryPage from '../plants-category-page/plants-category-page.component';
 import WithLoader from '../../components/withLoader/withLoader.component';

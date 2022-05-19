@@ -4,27 +4,37 @@
     position: relative;
 
     &__heading {
-        width: 40rem;
-        margin: 0 auto 3rem;
+        width: 45rem;
+        margin: 0 auto 6rem;
         text-align: center;
+        position: relative;
 
         &--text {
-            color: var(--color-secondary);
+            text-shadow: 3px 2px var(--color-white);
             font-family: var(--font-family-secondary);
-            font-size: var(--font-size-large);
+            font-size: var(--font-size-huge);
+
+            @media (max-width: 380px) {
+                font-size: var(--font-size-large);
+            }
         }
 
         & > .scroll-to-reveal {
-            height: 10rem;
-            position: relative;
+            height: 12rem;
+            position: absolute;
+            top: -4rem;
+
+            &.reveal {
+                width: 42rem;
+            }
         }
 
         &--icon {
-            width: 40rem;
+            width: 42rem;
             height: 15rem;
-            transform: scaleY(0.6);
+            transform: scaleX(1.2);
             position: absolute;
-            top: -5rem;
+            top: -2rem;
             left: 0;
         }
     }
