@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Ryu's Greeneries Shop
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is backed with Node.js server(https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
