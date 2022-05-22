@@ -38,7 +38,7 @@ const CheckOut = ({ allCartItems, totalQuantity, totalType, totalPrice }) => {
                         })
                     ) : (
                         <p className="checkout__no-item">
-                            There is no items in your cart.
+                            There is no item in your cart.
                         </p>
                     )}
                 </div>
