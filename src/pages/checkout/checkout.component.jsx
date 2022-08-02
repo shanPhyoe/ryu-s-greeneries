@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import { motion } from 'framer-motion';
 
 import {
     selectCartItems,
@@ -15,12 +16,25 @@ import CheckoutItem from '../../components/checkout-item/checkout-item.component
 import './checkout.styles.scss';
 import StripeCheckoutButton from '../../components/stripe-button/stripe-button.component';
 
+const variants = {
+    hidden: { opacity: 0 },
+    enter: { opacity: 1 },
+    exit: { opacity: 0 },
+};
+
 const CheckOut = ({ allCartItems, totalQuantity, totalType, totalPrice }) => {
     const shippingFee = 8;
     const totalShipping = totalPrice > 50 ? 0 : totalQuantity * shippingFee;
 
     return (
-        <div className="checkout">
+        <motion.div
+            className="checkout"
+            initial="hidden"
+            animate="enter"
+            exit="exit"
+            variants={variants}
+            transition={{ duration: 0.5, type: 'easeInOut' }}
+        >
             <h2 className="checkout__heading">
                 Your Cart
                 <Cart className="checkout__cart-icon" />
@@ -78,7 +92,7 @@ const CheckOut = ({ allCartItems, totalQuantity, totalType, totalPrice }) => {
                     ) : null}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

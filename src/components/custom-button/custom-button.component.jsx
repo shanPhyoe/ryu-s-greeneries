@@ -5,7 +5,7 @@ import './custom-button.styles.scss';
 const CustomButton = ({
     children,
     isGreen,
-    isGrey,
+    isCartDropdown,
     isSquared,
     isGoogleButton,
     isItemButton,
@@ -16,7 +16,7 @@ const CustomButton = ({
         <button
             className={`custom-button ${isGreen ? 'green' : ''} ${
                 isGoogleButton ? 'google-button' : ''
-            } ${isGrey ? 'grey' : ''} ${isDefault ? 'default' : ''} ${
+            } ${isCartDropdown ? 'cart' : ''} ${isDefault ? 'default' : ''} ${
                 isSquared ? 'square' : ''
             } ${isItemButton ? 'item-button' : ''}`}
             {...otherProps}

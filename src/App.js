@@ -1,7 +1,8 @@
-import React from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
+import { AnimatePresence } from 'framer-motion';
 
 import { checkCurrentUser } from './redux/user/user.action';
 import { selectCurrentUser } from './redux/user/user.selector';
@@ -17,45 +18,48 @@ import NotFound from './pages/notfound/not-found.component';
 import CartDropdown from './components/cart-dropdown/cart-dropdown.component';
 import Footer from './components/footer/footer.component';
 import Popup from './components/popup/popup.component';
+import ScrollToTop from './components/scroll-to-top/scroll-to-top.component';
 
 import './App.scss';
 
-class App extends React.Component {
-    componentDidMount() {
-        const { checkCurrentUser } = this.props;
+const App = ({ currentUser, checkCurrentUser }) => {
+    useEffect(() => {
         checkCurrentUser();
-    }
+    });
 
-    render() {
-        const { currentUser } = this.props;
-        return (
-            <div className="App">
-                <NavBar />
-                <Routes>
-                    <Route path="/" element={<HomePage />} />
-                    <Route path="/about" element={<AboutPage />} />
-                    <Route path="/shop/*" element={<ShopPage />} />
-                    <Route path="/search" element={<SearchPage />} />
-                    <Route
-                        path="/join"
-                        element={
-                            currentUser ? (
-                                <Navigate replace to="/" />
-                            ) : (
-                                <SignInSignUp />
-                            )
-                        }
-                    />
-                    <Route path="/checkout" element={<CheckOut />} />
-                    <Route path="*" element={<NotFound />} />
-                </Routes>
-                <CartDropdown />
-                <Popup />
-                <Footer />
-            </div>
-        );
-    }
-}
+    const location = useLocation();
+
+    return (
+        <div className="App">
+            <NavBar />
+            <ScrollToTop>
+                <AnimatePresence exitBeforeEnter>
+                    <Routes location={location} key={location.pathname}>
+                        <Route path="/" element={<HomePage />} />
+                        <Route path="/about" element={<AboutPage />} />
+                        <Route path="/shop/*" element={<ShopPage />} />
+                        <Route path="/search" element={<SearchPage />} />
+                        <Route
+                            path="/join"
+                            element={
+                                currentUser ? (
+                                    <Navigate replace to="/" />
+                                ) : (
+                                    <SignInSignUp />
+                                )
+                            }
+                        />
+                        <Route path="/checkout" element={<CheckOut />} />
+                        <Route path="*" element={<NotFound />} />
+                    </Routes>
+                </AnimatePresence>
+            </ScrollToTop>
+            <CartDropdown />
+            <Popup />
+            <Footer />
+        </div>
+    );
+};
 
 const mapStateToProps = createStructuredSelector({
     currentUser: selectCurrentUser,

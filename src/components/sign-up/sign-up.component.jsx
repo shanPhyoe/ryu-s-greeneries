@@ -23,6 +23,8 @@ const SignUp = ({ setSignInSession, signUpStart }) => {
     const handleSubmit = async event => {
         event.preventDefault();
 
+        if (!displayName || !email || !password || !confirmPassword) return;
+
         if (password !== confirmPassword) {
             alert('Passwords do not match');
             return;

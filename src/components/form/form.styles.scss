@@ -1,7 +1,9 @@
 .form-container {
     width: 40rem;
-    padding: 3rem 3rem 4.5rem;
+    padding: 3rem 4rem 4.5rem;
     background-color: rgba($color: #fff, $alpha: 0.8);
+    backdrop-filter: blur(4px);
+    border-radius: 1rem;
     text-align: center;
 
     @media (max-width: 360px) {

@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from 'react-redux';
 import { createStructuredSelector } from 'reselect';
-
-import Image from '../../assets/img/ivy-art-2.png';
+import { motion } from 'framer-motion';
 
 import {
     selectAllPlants,
@@ -11,10 +10,15 @@ import {
 
 import SearchBar from '../../components/search-bar/search-bar.component';
 import PlantsList from '../../components/plants-list/plants-list.component';
-import ScrollToReveal from '../../components/scroll-to-reveal/scroll-to-reveal.component';
 
 import './searchpage.styles.scss';
 import { fetchPlantsInit } from '../../redux/shop/shop.action';
+
+const variants = {
+    hidden: { opacity: 0 },
+    enter: { opacity: 1 },
+    exit: { opacity: 0 },
+};
 
 const SearchPage = ({ allPlants, isFetchingDone, fetchPlantsInit }) => {
     const [searchField, setSearchField] = useState('');
@@ -32,10 +36,14 @@ const SearchPage = ({ allPlants, isFetchingDone, fetchPlantsInit }) => {
     );
 
     return (
-        <div className="search-page">
-            <ScrollToReveal threshold=".2" fromTop={true}>
-                <img src={Image} className="search-page__art" alt="" />
-            </ScrollToReveal>
+        <motion.div
+            className="search-page"
+            initial="hidden"
+            animate="enter"
+            exit="exit"
+            variants={variants}
+            transition={{ duration: 0.5, type: 'easeInOut' }}
+        >
             <h3 className="search-page__heading">
                 Which plant are you looking for?
             </h3>
@@ -48,7 +56,7 @@ const SearchPage = ({ allPlants, isFetchingDone, fetchPlantsInit }) => {
             ) : (
                 <PlantsList items={searchedPlants} />
             )}
-        </div>
+        </motion.div>
     );
 };
 

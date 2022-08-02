@@ -68,7 +68,7 @@ const CartDropdown = ({ cartItems, cartDropdown, hideCartDropdown }) => {
                     <Link to="/checkout">
                         <CustomButton
                             isSquared
-                            isGrey
+                            isCartDropdown
                             onClick={() => hideCartDropdown()}
                         >
                             Proceed to Checkout

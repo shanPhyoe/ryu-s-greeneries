@@ -26,15 +26,16 @@ $google-blue: #357ae8;
     border-radius: 0;
 }
 
-.grey {
-    background-color: var(--color-tertiary);
+.cart {
+    background-color: var(--color-primary);
     border: 2px solid var(--color-white);
-    color: var(--color-white);
+    color: var(--color-tertiary-dark);
+    transition: all 0.4s;
 
     &:hover {
-        background-color: var(--color-primary);
-        border: 2px solid var(--color-tertiary);
-        color: var(--color-tertiary-dark);
+        border: 2px solid var(--color-black);
+        color: var(--color-black);
+        background-color: var(--color-secondary-light);
     }
 }
 

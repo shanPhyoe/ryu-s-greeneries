@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Routes, Route } from 'react-router-dom';
 import { createStructuredSelector } from 'reselect';
+import { motion } from 'framer-motion';
 
 import { fetchPlantsInit } from '../../redux/shop/shop.action';
 import { selectFetchingStatus } from '../../redux/shop/shop.selector';
@@ -18,13 +19,26 @@ import ScrollToReveal from '../../components/scroll-to-reveal/scroll-to-reveal.c
 const CategoriesOverviewWithLoader = WithLoader(CategoriesOverview);
 const PlantsCategoryPageWithLoader = WithLoader(PlantsCategoryPage);
 
+const variants = {
+    hidden: { opacity: 0 },
+    enter: { opacity: 1 },
+    exit: { opacity: 0 },
+};
+
 const ShopPage = ({ fetchPlantsInit, isFetchingDone }) => {
     useEffect(() => {
         !isFetchingDone && fetchPlantsInit();
     }, [isFetchingDone, fetchPlantsInit]);
 
     return (
-        <div className="shop-page">
+        <motion.div
+            className="shop-page"
+            initial="hidden"
+            animate="enter"
+            exit="exit"
+            variants={variants}
+            transition={{ duration: 0.5, type: 'easeInOut' }}
+        >
             <div className="shop-page__heading">
                 <h1 className="shop-page__heading--text">
                     Ryu's Greeneries Shop
@@ -55,7 +69,7 @@ const ShopPage = ({ fetchPlantsInit, isFetchingDone }) => {
                     }
                 />
             </Routes>
-        </div>
+        </motion.div>
     );
 };
 

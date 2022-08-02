@@ -1,8 +1,7 @@
 import React from 'react';
 import { connect, useSelector } from 'react-redux';
 import { useParams, useNavigate } from 'react-router-dom';
-
-// import Image from '../../assets/img/vine.png';
+import { motion } from 'framer-motion';
 
 import { addItemToCart } from '../../redux/cart/cart.action';
 import { selectPlant } from '../../redux/shop/shop.selector';
@@ -12,13 +11,26 @@ import CustomButton from '../../components/custom-button/custom-button.component
 
 import './plant-details.styles.scss';
 
+const variants = {
+    hidden: { opacity: 0 },
+    enter: { opacity: 1 },
+    exit: { opacity: 0 },
+};
+
 const PlantDetails = ({ addItem }) => {
     const navigate = useNavigate();
     const { plantId } = useParams();
     const plant = useSelector(selectPlant(plantId));
 
     return (
-        <div className="plant-details-page">
+        <motion.div
+            className="plant-details-page"
+            initial="hidden"
+            animate="enter"
+            exit="exit"
+            variants={variants}
+            transition={{ duration: 0.5, type: 'easeInOut' }}
+        >
             {plant ? (
                 <>
                     <div className="panels">
@@ -59,7 +71,7 @@ const PlantDetails = ({ addItem }) => {
             ) : (
                 <Loading />
             )}
-        </div>
+        </motion.div>
     );
 };
 
